@@ -16,7 +16,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
   <style>
     .shankx-summary-block{
-    position: relative;
+    position: relative; /* So that it flows within the bootstrap layout */
     width: 100%;
     margin: 0.3em;
     padding: 1em;
@@ -31,6 +31,23 @@
       font-size: 8em;
       opacity: 0.3;
     }
+
+    .shankx-summary-block .summary-body{
+      position: absolute; /* We can do absolute because it is within a relative */
+      top: 1.3em;
+      right: 0.8em;
+    }
+      
+      .shankx-summary-block .summary-body .summary-line-1{
+          text-align: right;
+          font-size: xx-large;
+          
+      }
+      
+      .shankx-summary-block .summary-body .summary-line-2{
+          text-align: right;
+          font-size: medium;
+      }
   </style>
 </head>
 
